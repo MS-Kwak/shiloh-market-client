@@ -20,7 +20,7 @@
 }
 
 #container {
-    height: 100%;
+    height: 100vh; /* vh/vw: 윈도우 높이/너비를 기준으로 하는 단위 */
     width: 1024px;
     margin: 0 auto;
     padding-bottom: 20px;
@@ -79,4 +79,9 @@
 #footer {
     height: 200px;
     background-color: #eee;
+}
+
+.puppy-link {
+    color: inherit;
+    text-decoration: none;
 }
