@@ -12,18 +12,18 @@ function PuppyPage() {
     useEffect(function () {
         // axios.get('https://71057566-4814-4374-bd4e-c5e359ff7d22.mock.pstmn.io/puppies'+id)
         axios
-            .get(`https://71057566-4814-4374-bd4e-c5e359ff7d22.mock.pstmn.io/puppies/${id}`)
+            .get(`https://71057566-4814-4374-bd4e-c5e359ff7d22.mock.pstmn.io/puppies${id}`)
             .then(function (result) {
-                console.log('[axios result]', result);
+                console.log('..... PuppyPage [axios result]', result);
                 setPuppy(result.data);
             })
             .catch(function (err) {
-                console.log('에러발생 -----', err);
+                console.log('..... PuppyPage [axios 에러발생] ---', err);
             });
     }, []);
     // console.log('[puppyData]', puppyData);
     if (puppyData === null) {
-        return <h1>퍼피 페이지 {id}을 불러오고 있어요~~~~~</h1>;
+        return <h1 className="tit-loading">퍼피 페이지 {id}을 불러오고 있어요~~~~~</h1>;
     }
 
     return (

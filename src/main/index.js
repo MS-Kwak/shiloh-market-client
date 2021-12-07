@@ -10,9 +10,9 @@ function MainPageComponent() {
         // Postman 플랫폼에서 만들어 놓은 mock 서버
         // https://71057566-4814-4374-bd4e-c5e359ff7d22.mock.pstmn.io/puppies
         axios
-            .get('https://71057566-4814-4374-bd4e-c5e359ff7d22.mock.pstmn.io/puppy')
+            .get('https://71057566-4814-4374-bd4e-c5e359ff7d22.mock.pstmn.io/puppies')
             .then(function (result) {
-                console.log('[axios result]', result);
+                console.log('..... MainPageComponent [axios result]', result);
                 const puppies = result.data.puppies;
                 setPuppies(puppies);
             })
@@ -37,7 +37,7 @@ function MainPageComponent() {
                             {/* <Link className="puppy-link" to={'/puppy/' + idx}> */}
                             {/* <Link className="puppy-link" to={`/puppy/${idx}`}> */}
                             {/* 실제 postman 목서버에 만들어놓은 id */}
-                            <Link className="puppy-link" to={`/puppies/${data.id}`}>
+                            <Link className="puppy-link" to={`/puppies${data.id}`}>
                                 <div>
                                     <img className="puppy-img" src={data.imageUrl} />
                                 </div>
